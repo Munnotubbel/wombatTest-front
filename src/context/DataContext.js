@@ -19,6 +19,7 @@ console.log("in function")
             credentials: "include",
             body:JSON.stringify({ "account_name": "munnotubbel1"}),
             headers: {
+              "Access-Control-Allow-Origin":"*",
                'Content-type': 'application/json' },
           
           },
