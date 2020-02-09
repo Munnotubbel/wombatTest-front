@@ -14,12 +14,13 @@ const DataContextProvider =(props)=> {
 console.log("in function")
         
         fetch(`https://api.eosdetroit.io:443/v1/chain/get_account`, {
-          mode: "no-cors",
+          
             method: "POST",
-            
+            credentials: "include",
+            body:JSON.stringify({ "account_name": "munnotubbel1"}),
             headers: {
                'Content-type': 'application/json' },
-           body:{ "account_name": "munnotubbel1"}
+          
           },
            
           )
