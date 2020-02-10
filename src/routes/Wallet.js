@@ -13,11 +13,11 @@ const Wallet = () => {
     <div className="wallet">
       {dataCon.isLoading === true ? (
         <div className="ammount">
-          {/* <EosLoader/> */}
+           <EosLoader/> 
        
         
         </div>
-      ) : (
+      ) : ( 
         <div className="ammount">
           <div id="eos">
             <h1>{dataCon.ballance}</h1>
