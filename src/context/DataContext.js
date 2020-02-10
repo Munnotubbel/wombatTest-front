@@ -29,7 +29,7 @@ const sourceLink ="https://aflatwombat.herokuapp.com/"
     myHeaders.append('Access-Control-Allow-Origin', sourceLink);
     var requestOptions = {
       method: "GET",
-      headers: myHeaders
+      headers: {"Access-Control-Allow-Origin": "https://aflatwombat.herokuapp.com"}
     };
 
     fetch(
@@ -65,7 +65,7 @@ const sourceLink ="https://aflatwombat.herokuapp.com/"
     myHeaders.append('Access-Control-Allow-Origin', sourceLink);
     var requestOptions2 = {
       method: "GET",
-      headers: myHeaders
+      headers: {"Access-Control-Allow-Origin": "https://aflatwombat.herokuapp.com"}
     };
 
     
