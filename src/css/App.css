@@ -1,38 +1,59 @@
 @font-face {
   font-family: "TrajanaSans";
-  src: url("../fonts/TrajanaSans.eot"); /* IE9 Compat Modes */
-  src: url("../fonts/TrajanaSans.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("../fonts/TrajanaSans.otf") format("opentype"), /* Open Type Font */
-    url("../fonts/TrajanaSans.svg") format("svg"), /* Legacy iOS */
-    url("../fonts/TrajanaSans.ttf") format("truetype"), /* Safari, Android, iOS */
-    url("../fonts/TrajanaSans.woff") format("woff"), /* Modern Browsers */
-    url("../fonts/TrajanaSans.woff2") format("woff2"); /* Modern Browsers */
+  src: url("../fonts/TrajanaSans.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/TrajanaSans.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../fonts/TrajanaSans.otf") format("opentype"),
+    /* Open Type Font */
+    url("../fonts/TrajanaSans.svg") format("svg"),
+    /* Legacy iOS */
+    url("../fonts/TrajanaSans.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("../fonts/TrajanaSans.woff") format("woff"),
+    /* Modern Browsers */
+    url("../fonts/TrajanaSans.woff2") format("woff2");
+  /* Modern Browsers */
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "TrajanaSans-Regular2";
-  src: url("../fonts/TrajanaSansLight.eot"); /* IE9 Compat Modes */
-  src: url("../fonts/TrajanaSansLight.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("../fonts/TrajanaSansLight.otf") format("opentype"), /* Open Type Font */
-    url("../fonts/TrajanaSansLight.svg") format("svg"), /* Legacy iOS */
-    url("../fonts/TrajanaSansLight.ttf") format("truetype"), /* Safari, Android, iOS */
-    url("../fonts/TrajanaSansLight.woff") format("woff"), /* Modern Browsers */
-    url("../fonts/TrajanaSansLight.woff2") format("woff2"); /* Modern Browsers */
+  src: url("../fonts/TrajanaSansLight.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/TrajanaSansLight.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../fonts/TrajanaSansLight.otf") format("opentype"),
+    /* Open Type Font */
+    url("../fonts/TrajanaSansLight.svg") format("svg"),
+    /* Legacy iOS */
+    url("../fonts/TrajanaSansLight.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("../fonts/TrajanaSansLight.woff") format("woff"),
+    /* Modern Browsers */
+    url("../fonts/TrajanaSansLight.woff2") format("woff2");
+  /* Modern Browsers */
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "TrajanaSans-Regular3";
-  src: url("../fonts/TrajanaSansBold.eot"); /* IE9 Compat Modes */
-  src: url("../fonts/TrajanaSansBold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("../fonts/TrajanaSansBold.otf") format("opentype"), /* Open Type Font */
-    url("../fonts/TrajanaSansBold.svg") format("svg"), /* Legacy iOS */
-    url("../fonts/TrajanaSansBold.ttf") format("truetype"), /* Safari, Android, iOS */
-    url("../fonts/TrajanaSansBold.woff") format("woff"), /* Modern Browsers */
-    url("../fonts/TrajanaSansBold.woff2") format("woff2"); /* Modern Browsers */
+  src: url("../fonts/TrajanaSansBold.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/TrajanaSansBold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../fonts/TrajanaSansBold.otf") format("opentype"),
+    /* Open Type Font */
+    url("../fonts/TrajanaSansBold.svg") format("svg"),
+    /* Legacy iOS */
+    url("../fonts/TrajanaSansBold.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("../fonts/TrajanaSansBold.woff") format("woff"),
+    /* Modern Browsers */
+    url("../fonts/TrajanaSansBold.woff2") format("woff2");
+  /* Modern Browsers */
   font-weight: normal;
   font-style: normal;
 }
@@ -50,156 +71,217 @@ body {
 
 
 .outerContainer {
-  
+
   width: 100vw;
   height: 100vh;
-  max-width:100%;
+  max-width: 100%;
 
   display: flex;
   align-items: center;
-  
+
   flex-direction: column;
 }
 
 
 
-.header,.ammount,.info,.footer, #eos, #dollar
-{  
-display: flex;
+.header,
+.ammount,
+.info,
+.footer,
+#eos,
+#dollar {
+  display: flex;
 
+
+}
+
+.header {
+  flex: 0.25;
+
+  min-height: 40px;
+}
+
+
+.headtitle {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.headtitle h1 {
+  font-size: 3vh;
+  letter-spacing: 2px;
+  font-family: "trajanaSans-Regular2";
+
+}
+
+
+
+
+.info {
+  margin-bottom: 60px;
+  flex: 2.0;
+
+  width: 100%;
+  min-height: 320px;
+}
+
+.wallet {
+  display: flex;
+
+  flex-direction: column;
+  flex: 1
+}
+
+
+
+
+.ammount {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
  
-  }
-
-.header{ flex:0.25;
-  
-  min-height: 40px;}
-
-
- .headtitle{display: flex;
-  
-justify-content: center;
-align-items: center;} 
-
-.headtitle h1{font-size: 3vh; letter-spacing: 2px;
-font-family: "trajanaSans-Regular2";
-
+  min-height: 75px;
 }
 
-
-
-
-.info{
- margin-bottom: 60px;
-  flex:2.0;
-
-  width: 100%;
-  min-height: 320px;
-}
-
-.wallet{display: flex;
-  
-flex-direction: column;
-flex:1}
-
-
-
-
-.ammount{  
+.tradebuttons{
+ 
   width: 100%;
   flex-direction: column;
   align-items: center;
-justify-content: center;
-  flex:2;  
-  min-height: 150px;
-}
+  justify-content: center;
+  flex: 1;
+  min-height: 75px;
 
-#dollar, #eos{  
-
-letter-spacing: 2px;
-flex-direction: row;
 
 }
 
-#eos{padding-left: 20px; font-size: 30px; min-height: 45px;}
-#eos h1, #eosimg {align-self: center; justify-self: center;}
-#eos img {height: 35px; width: "auto"; }
-#dollar h2{font-size: 12px; padding-top: 5x}
+#dollar,
+#eos {
+
+  letter-spacing: 2px;
+  flex-direction: row;
+
+}
+
+#eos {
+  padding-left: 20px;
+  font-size: 30px;
+  min-height: 45px;
+}
+
+#eos h1,
+#eosimg {
+  align-self: center;
+  justify-self: center;
+}
+
+#eos img {
+  height: 40px;
+  width: "auto";
+}
+
+#dollar h2 {
+  font-size: 12px;
+  padding-top: 5x
+}
 
 
-
-.resourceinfo{
-  flex:2.0;
+.resourceinfo {
+  
+  flex: 2.0;
   display: flex;
   flex-direction: column;
   width: 100%;
   min-height: 320px;
 }
 
-#ressources_title{
+#ressources_title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   line-height: 1.4;
 }
-#ressources_title h4, #ressources_title h5{font-size: 12px; letter-spacing: -1px;}
-#ressources_title h4{margin-left: 15px;}
-#ressources_title div{margin-right: 15px; text-align: right; }
+
+#ressources_title h4,
+#ressources_title h5 {
+  font-size: 12px;
+  letter-spacing: -1px;
+}
+
+#ressources_title h4 {
+  margin-left: 5%;
+}
+
+#ressources_title div {
+  margin-right: 5%;
+  text-align: right;
+}
 
 
 
 
-.ressources{
+.ressources {
   width: 100%;
   flex-direction: column;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
+
   min-height: 100%;
 }
 
-.ressources>div{
- 
+.ressources>div {
+
   width: 90%;
 }
 
-.ressource_type{
-  
+.ressource_type {
+
   display: flex;
   flex-direction: row;
-  
+
   align-items: center;
 }
 
-.ressource_type #type, .ressource_type #consumption, .ressource_type #staked{
- 
-}
+.ressource_type #type,
+.ressource_type #consumption,
+.ressource_type #staked {}
 
-.ressource_type #type{
+.ressource_type #type {
   min-width: 80px;
-  
+
   flex: 0.5;
   font-size: 25px;
 }
-.ressource_type #consumption{
+
+.ressource_type #consumption {
   letter-spacing: 2px;
-  font-size: 12px;
-  flex:2
+  font-size: 11px;
+  flex: 3;
+
 }
-.ressource_type #staked{
+
+.ressource_type #staked {
   text-align: right;
-  
-  flex: 3}
+
+  flex: 2
+}
 
 
 
 
-.progressbar{display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-min-width: 90%;
-height: 20px;}
+.progressbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 90%;
+  height: 20px;
+}
 
 
 .percent {
@@ -207,13 +289,13 @@ height: 20px;}
   display: flex;
   justify-content: center;
   align-items: center;
- 
+
   font-size: 12px;
 }
 
 
-.barOuter{
-  flex:0.9;
+.barOuter {
+  flex: 0.9;
   height: 100%;
   background-color: black;
 
@@ -221,55 +303,90 @@ height: 20px;}
 
 
 
-.footer{
+.footer {
   background-color: white;
   position: fixed;
   bottom: 0;
   z-index: 100;
   flex: 0.25;
   width: 100%;
-  min-height: 50px;}
-
-  .navbar{
-    border-top: 1px solid black;
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    
-  }
-
-  .navbar a{
-    color: inherit;
-    text-decoration: none;}
-  
-
-  .navicon{display: flex;
-          flex:1;
-          flex-direction: column;
-        justify-content: center;
-        align-items: center;}
-
-  .navicon img{
-height: 28px;
-width: auto;
+  min-height: 50px;
 }
-.navicon p{padding-top: 5px;
-  font-size: 10px;}
 
-  .tobeadded{
-    justify-self: center;
-    align-self: center;
-    display: flex;
-    width: 100%;
-    justify-content: center;
- 
-  }
-  
-  .activeRoute {
-  
-    opacity: 0.3;
-    
-    cursor: not-allowed;
-  }
+.navbar {
+  border-top: 1px solid black;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.navbar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.navicon {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navicon img {
+  height: 28px;
+  width: auto;
+}
+
+.navicon p {
+  padding-top: 5px;
+  font-size: 10px;
+}
+
+.tobeadded {
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+}
+
+.activeRoute {
+
+  opacity: 0.3;
+
+  cursor: not-allowed;
+}
+
+.tradebuttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.tradebutton{
+  outline: 0;
+  font-family:"trajanaSans-Regular2" ;
+  width: 100px;
+  height: 40px;
+  -webkit-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.96);
+  -moz-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.96);
+  box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.96);
+  border:0px;
+background-color: white;
+}
+.tradebutton:hover{
+  -webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.96);
+  -moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.96);
+  box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.96);
+}
+
+.tradebutton:active{
+
+   transform: scale(0.9);
+}
