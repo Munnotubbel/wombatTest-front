@@ -137,10 +137,10 @@ body {
 }
 
 .pulse {
-  position: relative;
-  top: 0%;
+  position: absolute;
+  top: 10%;
   min-height: 80px;
-  height: 50%;
+  height: 7vh;
   width: auto;
 
   -webkit-animation: pulsing 4s linear infinite; /* Safari & Chrome */
