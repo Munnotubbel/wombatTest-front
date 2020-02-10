@@ -76,8 +76,9 @@ body {
 
 .outerContainer {
   min-width: 100%;
-  min-height: 100%;
-  max-width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  max-height: 100%;
 
   align-items: center;
 }
@@ -105,8 +106,8 @@ body {
 }
 
 .header {
-  flex: 0.25;
-
+ padding-top: 5px;
+ 
   min-height: 40px;
 }
 
@@ -332,6 +333,7 @@ body {
 }
 
 .tobeadded {
+  flex: 2;
   width: 100%;
 }
 

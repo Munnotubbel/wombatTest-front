@@ -34,7 +34,7 @@ const ProgressBar = props => {
   return (
     <div className="progressbar">
       <div className="percent">
-        <div>{props.percent} %</div>
+        <div>{isNaN(props.percent)? "-" : props.percent} %</div>
       </div>
       <div className="barOuter">
         <div id={props.slug} 
