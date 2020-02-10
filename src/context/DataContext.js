@@ -25,7 +25,7 @@ const DataContextProvider = props => {
   function getExchangeValue() {
     var requestOptions = {
       method: "GET",
-      mode: "no-cors"
+      'Access-Control-Allow-Origin':'http://localhost:3000/'
     };
 
     fetch(
@@ -45,7 +45,7 @@ const DataContextProvider = props => {
   function getAccount() {
     // Request Header for direct API
 
-      var myHeaders = new Headers();
+/*       var myHeaders = new Headers();
     myHeaders.append("Content-Type", "text/plain");
 
     var raw = `{"account_name":"${accountName}"}`;
@@ -55,16 +55,16 @@ const DataContextProvider = props => {
       headers: myHeaders,
       body: raw,
       redirect: "follow"
-    };  
+    };   */
 
     var requestOptions2 = {
       method: "GET"
     };
 
-    //http://localhost:8080/api/fetch/${accountName} own server api
     
+   // https://api.eosdetroit.io:443/v1/chain/get_account direct API
 
-    fetch(`https://api.eosdetroit.io:443/v1/chain/get_account`, requestOptions)
+    fetch(`https://eos-station.herokuapp.com/api/fetch/${accountName}`, requestOptions2)
       .then(response => response.json())
       .then(result => {
        console.log(result)
