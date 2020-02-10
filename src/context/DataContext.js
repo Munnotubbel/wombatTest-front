@@ -43,7 +43,7 @@ const DataContextProvider = props => {
   function getAccount() {
     // Request Header for direct API
 
-    /*   var myHeaders = new Headers();
+      var myHeaders = new Headers();
     myHeaders.append("Content-Type", "text/plain");
 
     var raw = `{"account_name":"${accountName}"}`;
@@ -53,18 +53,21 @@ const DataContextProvider = props => {
       headers: myHeaders,
       body: raw,
       redirect: "follow"
-    };  */
+    };  
 
     var requestOptions2 = {
       method: "GET"
     };
 
-    //https://api.eosdetroit.io:443/v1/chain/get_account  direct API
+    //http://localhost:8080/api/fetch/${accountName} own server api
+    
 
-    fetch(`http://localhost:8080/api/fetch/${accountName}`, requestOptions2)
+    fetch(`https://api.eosdetroit.io:443/v1/chain/get_account `, requestOptions)
       .then(response => response.json())
       .then(result => {
-        console.log(result);
+       console.log(result)
+        if(result){
+        
 
         result.core_liquid_balance &&
           setBallance(result.core_liquid_balance.replace(" EOS", ""));
@@ -77,7 +80,8 @@ const DataContextProvider = props => {
         setNetWeight(stakedFormat(result.net_weight, 0));
         setCpuWeight(stakedFormat(result.cpu_weight, 0));
         setStaked(stakedFormat(result.net_weight, result.cpu_weight));
-        setIsLoading(false);
+        setIsLoading(false);}
+        else{console.log("Fetch did not work")}
       })
       .catch(error => console.log("error", error));
   }
