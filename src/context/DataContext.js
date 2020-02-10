@@ -22,15 +22,13 @@ const DataContextProvider = props => {
   const [exchangeValue, setExchangeValue] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
-const netlifyLink="https://aflatwombat.netlify.com/"
+const sourceLink ="https://aflatwombat.netlify.com"
 
   function getExchangeValue() {
-    var myHeaders = new Headers();
-    myHeaders.append('Access-Control-Allow-Origin', netlifyLink);
     var requestOptions = {
       method: "GET",
-      headers: myHeaders,
-      
+      headers:{
+      'Access-Control-Allow-Origin':sourceLink}
     };
 
     fetch(
@@ -61,12 +59,15 @@ const netlifyLink="https://aflatwombat.netlify.com/"
       body: raw,
       redirect: "follow"
     };   */
-    var myHeaders2 = new Headers();
-    myHeaders2.append('Access-Control-Allow-Origin', netlifyLink);
+   
+   
     var requestOptions2 = {
       method: "GET",
-      headers: myHeaders2,
-    };
+      headers:{
+     
+        'Access-Control-Allow-Origin':sourceLink,
+ 
+    }};
 
     
    // https://api.eosdetroit.io:443/v1/chain/get_account direct API
