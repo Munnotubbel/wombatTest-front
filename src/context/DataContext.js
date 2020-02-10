@@ -22,14 +22,14 @@ const DataContextProvider = props => {
   const [exchangeValue, setExchangeValue] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
-const sourceLink ="http://localhost:3000"
+const sourceLink ="https://aflatwombat.herokuapp.com/"
 
   function getExchangeValue() {
-  /*   var myHeaders = new Headers();
-    myHeaders.append('Access-Control-Allow-Origin', sourceLink); */
+   var myHeaders = new Headers();
+    myHeaders.append('Access-Control-Allow-Origin', sourceLink);
     var requestOptions = {
       method: "GET",
-     
+      headers: myHeaders
     };
 
     fetch(
