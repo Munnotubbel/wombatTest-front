@@ -22,10 +22,15 @@ const DataContextProvider = props => {
   const [exchangeValue, setExchangeValue] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
+const netlifyLink="https://aflatwombat.netlify.com/"
+
   function getExchangeValue() {
+    var myHeaders = new Headers();
+    myHeaders.append('Access-Control-Allow-Origin', netlifyLink);
     var requestOptions = {
       method: "GET",
-      'Access-Control-Allow-Origin':'https://aflatwombat.netlify.com/'
+      headers: myHeaders,
+      
     };
 
     fetch(
@@ -56,10 +61,11 @@ const DataContextProvider = props => {
       body: raw,
       redirect: "follow"
     };   */
-
+    var myHeaders2 = new Headers();
+    myHeaders2.append('Access-Control-Allow-Origin', netlifyLink);
     var requestOptions2 = {
       method: "GET",
-      'Access-Control-Allow-Origin':'https://aflatwombat.netlify.com/'
+      headers: myHeaders2,
     };
 
     
