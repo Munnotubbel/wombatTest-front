@@ -3,7 +3,7 @@ import { DataContext } from "../context/DataContext";
 
 const ProgressBar = props => {
    const dataCon = useContext(DataContext);
-   useEffect(() => {
+/*    useEffect(() => {
     move()
   }, [dataCon.isLoading===true]);
 
@@ -28,7 +28,7 @@ const ProgressBar = props => {
        }
      }}
      else{elem.style.width = props.percent+"%"}
-   }
+   } */
 
 
   return (
@@ -39,7 +39,7 @@ const ProgressBar = props => {
       <div className="barOuter">
         <div id={props.slug} 
           style={{
-            width:"0%",
+            width:`${props.percent}%`,
             backgroundColor: "white",
             borderColor: "black",
             borderWidth: "2px",
