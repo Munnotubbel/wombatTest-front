@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Ressources from "../components/Ressources";
 import { DataContext } from "../context/DataContext";
 import TradeButtons from "../components/TradeButtons";
+import EosLoader from "../components/EosLoader"
 const Wallet = () => {
   const eosIcon =
     "https://res.cloudinary.com/munnotubbel/image/upload/v1581182752/wombat/5a52232c2f93c7a8d5137fdd_izhtxc.png";
@@ -12,8 +13,9 @@ const Wallet = () => {
     <div className="wallet">
       {dataCon.isLoading === true ? (
         <div className="ammount">
-          <img className="pulse" src={eosIcon} />
-          <p style={{paddingTop:"2%"}}>loading</p>
+          <EosLoader/>
+       
+        
         </div>
       ) : (
         <div className="ammount">

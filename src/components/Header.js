@@ -7,7 +7,8 @@ const Header = () => {
     console.log(dataCon)
     return (
         <div className="headtitle">  
-             <h1>{dataCon.accountName!==null ? dataCon.accountName : "nobody" }</h1>
+                {dataCon.isLoading===true ? <h1>loading</h1>:
+             <h1>{dataCon.accountName!==null ? dataCon.accountName : "nobody" }</h1>}
         </div>
     )
 }

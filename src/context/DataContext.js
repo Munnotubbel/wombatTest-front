@@ -63,7 +63,7 @@ const DataContextProvider = props => {
     //http://localhost:8080/api/fetch/${accountName} own server api
     
 
-    fetch(`https://api.eosdetroit.io:443/v1/chain/get_account `, requestOptions)
+    fetch(`https://api.eosdetroit.io:443/v1/chain/get_accoun`, requestOptions)
       .then(response => response.json())
       .then(result => {
        console.log(result)
