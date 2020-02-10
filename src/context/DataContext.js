@@ -22,7 +22,7 @@ const DataContextProvider = props => {
   const [exchangeValue, setExchangeValue] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
-const sourceLink ="https://aflatwombat.herokuapp.com/"
+const sourceLink ="*"
 
   function getExchangeValue() {
    var myHeaders = new Headers();
@@ -30,7 +30,7 @@ const sourceLink ="https://aflatwombat.herokuapp.com/"
     var requestOptions = {
       method: "GET",
       redirect: 'follow',
-      headers: {"Access-Control-Allow-Origin": "https://aflatwombat.herokuapp.com"}
+      headers: {"Access-Control-Allow-Origin": sourceLink}
     };
 
     fetch(
@@ -67,7 +67,7 @@ const sourceLink ="https://aflatwombat.herokuapp.com/"
     var requestOptions2 = {
       method: "GET",
       redirect: 'follow',
-      headers: {"Access-Control-Allow-Origin": "https://aflatwombat.herokuapp.com"}
+      headers: {"Access-Control-Allow-Origin": sourceLink}
     };
 
     
