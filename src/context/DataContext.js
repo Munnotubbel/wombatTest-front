@@ -8,9 +8,6 @@ const DataContextProvider = props => {
     getAccount();
   }, []);
 
-
- 
-
   const [accountName, setAccountName] = useState("genialwombat");
   const [ballance, setBallance] = useState("0.0000");
   const [net_max, setNet_max] = useState(0);
@@ -22,51 +19,55 @@ const DataContextProvider = props => {
   const [netWeight, setNetWeight] = useState(0.0);
   const [cpuWeight, setCpuWeight] = useState(0.0);
   const [staked, setStaked] = useState(0.0);
-  const [exchangeValue, setExchangeValue]=useState()
+  const [exchangeValue, setExchangeValue] = useState();
+  const [isLoading, setIsLoading] = useState(true);
 
-
-  
-  function getExchangeValue(){
-
+  function getExchangeValue() {
     var requestOptions = {
-      method: "GET",     
+      method: "GET"
     };
 
-    fetch("http://api.coinlayer.com/live?access_key=a5deb615efb96cc952941358bd6f2c36", requestOptions)
-    .then(response=>response.json())
-    .then(res=> setExchangeValue(res.rates.EOS))
-    .catch(error => console.log("error", error));
+    fetch(
+      "http://api.coinlayer.com/live?access_key=a5deb615efb96cc952941358bd6f2c36",
+      requestOptions
+    )
+      .then(response => response.json())
+      .then(res => setExchangeValue(res.rates.EOS))
+      .catch(error => console.log("error", error));
   }
 
-
+  function changeAccountName(name) {
+    setAccountName(name);
+  }
 
   function getAccount() {
-    console.log(accountName);
-    var myHeaders = new Headers();
+    // Request Header for direct API
+
+    /*   var myHeaders = new Headers();
     myHeaders.append("Content-Type", "text/plain");
 
     var raw = `{"account_name":"${accountName}"}`;
 
-    var requestOptions = {
+     var requestOptions = {
       method: "POST",
       headers: myHeaders,
       body: raw,
       redirect: "follow"
-    };
+    };  */
 
     var requestOptions2 = {
-      method: "GET",
-     
+      method: "GET"
     };
 
-    //https://api.eosdetroit.io:443/v1/chain/get_account
-   
+    //https://api.eosdetroit.io:443/v1/chain/get_account  direct API
+
     fetch(`http://localhost:8080/api/fetch/${accountName}`, requestOptions2)
       .then(response => response.json())
       .then(result => {
         console.log(result);
-        
-        result.core_liquid_balance && setBallance(result.core_liquid_balance.replace(" EOS", ""));
+
+        result.core_liquid_balance &&
+          setBallance(result.core_liquid_balance.replace(" EOS", ""));
         setNet_max(round2(result.net_limit.max / 1000));
         setNet_use(round2(result.net_limit.used / 1000));
         setCpu_max(round2(result.cpu_limit.max / 1000));
@@ -76,11 +77,10 @@ const DataContextProvider = props => {
         setNetWeight(stakedFormat(result.net_weight, 0));
         setCpuWeight(stakedFormat(result.cpu_weight, 0));
         setStaked(stakedFormat(result.net_weight, result.cpu_weight));
-        console.log(result);
+        setIsLoading(false);
       })
       .catch(error => console.log("error", error));
   }
-
 
   function round2(number) {
     number = Math.round(number * 100) / 100;
@@ -90,8 +90,6 @@ const DataContextProvider = props => {
   function stakedFormat(number1, number2) {
     return ((number1 + number2) / 10000).toFixed(4);
   }
-
-
 
   return (
     <DataContext.Provider
@@ -107,7 +105,9 @@ const DataContextProvider = props => {
         ram_use: ram_use,
         net_weight: netWeight,
         cpu_weight: cpuWeight,
-        exchangeValue: exchangeValue
+        exchangeValue: exchangeValue,
+        isLoading: isLoading,
+        changeAccountName: changeAccountName
       }}
     >
       {props.children}
