@@ -27,7 +27,7 @@ const Ressources = () => {
           staked={dataCon.net_weight}
           withIcon={true}
         />
-        <ProgressBar percent={calcPercent(dataCon.net_use, dataCon.net_max)} />
+        <ProgressBar percent={calcPercent(dataCon.net_use, dataCon.net_max)} slug={"netBar"}/>
       </div>
 
       <div>
@@ -37,7 +37,7 @@ const Ressources = () => {
           staked={dataCon.cpu_weight}
           withIcon={true}
         />
-        <ProgressBar percent={calcPercent(dataCon.cpu_use, dataCon.cpu_max)} />
+        <ProgressBar percent={calcPercent(dataCon.cpu_use, dataCon.cpu_max)} slug={"cpuBar"}/>
       </div>
 
       <div style={{ marginBottom: "60px" }}>
@@ -46,7 +46,7 @@ const Ressources = () => {
           consumption={`${dataCon.ram_use}kb / ${dataCon.ram_max}kb`}
           staked={""}
         />
-        <ProgressBar percent={calcPercent(dataCon.ram_use, dataCon.ram_max)} />
+        <ProgressBar percent={calcPercent(dataCon.ram_use, dataCon.ram_max)} slug={"ramBar"}/>
       </div>
     </div>
   );
