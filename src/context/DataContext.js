@@ -25,12 +25,10 @@ const DataContextProvider = props => {
 const sourceLink ="*"
 
   function getExchangeValue() {
-   var myHeaders = new Headers();
-    myHeaders.append('Access-Control-Allow-Origin', sourceLink);
     var requestOptions = {
       method: "GET",
       redirect: 'follow',
-      headers: {"Access-Control-Allow-Origin": sourceLink}
+     
     };
 
     fetch(
