@@ -29,6 +29,7 @@ const sourceLink ="https://aflatwombat.herokuapp.com/"
     myHeaders.append('Access-Control-Allow-Origin', sourceLink);
     var requestOptions = {
       method: "GET",
+      redirect: 'follow',
       headers: {"Access-Control-Allow-Origin": "https://aflatwombat.herokuapp.com"}
     };
 
@@ -46,7 +47,7 @@ const sourceLink ="https://aflatwombat.herokuapp.com/"
     setAccountName(name);
   }
 
-  function getAccount() {
+  function getAccount() { 
     // Request Header for direct API
 
 /*       var myHeaders = new Headers();
@@ -65,6 +66,7 @@ const sourceLink ="https://aflatwombat.herokuapp.com/"
     myHeaders.append('Access-Control-Allow-Origin', sourceLink);
     var requestOptions2 = {
       method: "GET",
+      redirect: 'follow',
       headers: {"Access-Control-Allow-Origin": "https://aflatwombat.herokuapp.com"}
     };
 
