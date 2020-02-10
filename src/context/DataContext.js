@@ -58,7 +58,8 @@ const DataContextProvider = props => {
     };   */
 
     var requestOptions2 = {
-      method: "GET"
+      method: "GET",
+      'Access-Control-Allow-Origin':'https://aflatwombat.netlify.com/'
     };
 
     
