@@ -25,7 +25,7 @@ const DataContextProvider = props => {
   function getExchangeValue() {
     var requestOptions = {
       method: "GET",
-      'Access-Control-Allow-Origin':'http://localhost:3000/'
+      'Access-Control-Allow-Origin':'https://aflatwombat.netlify.com/'
     };
 
     fetch(
