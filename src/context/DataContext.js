@@ -24,7 +24,8 @@ const DataContextProvider = props => {
 
   function getExchangeValue() {
     var requestOptions = {
-      method: "GET"
+      method: "GET",
+      mode: "no-cors"
     };
 
     fetch(
