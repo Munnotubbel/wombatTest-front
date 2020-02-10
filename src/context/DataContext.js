@@ -28,11 +28,12 @@ const DataContextProvider = props => {
     };
 
     fetch(
-      "http://api.coinlayer.com/live?access_key=a5deb615efb96cc952941358bd6f2c36",
+      "https://api.nomics.com/v1/currencies/ticker?key=7c8016160f57bb4a5ab8707a73810e33&ids=EOS",
       requestOptions
     )
       .then(response => response.json())
-      .then(res => setExchangeValue(res.rates.EOS))
+      .then(res => {console.log(res); setExchangeValue(res[0].price)})
+      
       .catch(error => console.log("error", error));
   }
 

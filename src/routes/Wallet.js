@@ -10,17 +10,24 @@ const Wallet = () => {
   const exchangeValue = dataCon.ballance * dataCon.exchangeValue;
   return (
     <div className="wallet">
-      <div className="ammount">
-        <div id="eos">
-          <h1>{dataCon.ballance}</h1>
-          <img alt="EOS-ICON" src={eosIcon} />
+      {dataCon.isLoading === true ? (
+        <div className="ammount">
+          <img className="pulse" src={eosIcon} />
+          <p style={{paddingTop:"2%"}}>loading</p>
         </div>
-        <div id="dollar">
-          <h2>{`= ${
-            isNaN(exchangeValue) ? "-" : exchangeValue.toFixed(2)
-          }$`}</h2>
+      ) : (
+        <div className="ammount">
+          <div id="eos">
+            <h1>{dataCon.ballance}</h1>
+            <img alt="EOS-ICON" src={eosIcon} />
+          </div>
+          <div id="dollar">
+            <h2>{`= ${
+              isNaN(exchangeValue) ? "-" : exchangeValue.toFixed(2)
+            }$`}</h2>
+          </div>
         </div>
-      </div>
+      )}
 
       <TradeButtons />
       <div className="resourceinfo">

@@ -157,6 +157,29 @@ body {
   min-height: 75px;
 }
 
+.pulse{height: 80%; width:auto;
+animation: pulsing 4s linear infinite;
+}
+
+@keyframes pulsing {
+  0% {
+    transform: scale(1.0);
+    
+   
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+
+
+
 .tradebuttons{
  
   width: 100%;
