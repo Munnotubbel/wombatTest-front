@@ -4,7 +4,7 @@ const Header = () => {
     
     
     const dataCon = useContext(DataContext);
-    console.log(dataCon)
+    
     return (
         <div className="headtitle">  
                 {dataCon.isLoading===true ? <h1>loading</h1>:

@@ -75,8 +75,8 @@ body {
 }
 
 .outerContainer {
-  width: 100vw;
-  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
   max-width: 100%;
 
   align-items: center;
@@ -252,10 +252,7 @@ body {
   align-items: center;
 }
 
-.ressource_type #type,
-.ressource_type #consumption,
-.ressource_type #staked {
-}
+
 
 .ressource_type #type {
   min-width: 80px;
@@ -353,7 +350,7 @@ body {
   outline: 0;
   font-family: "trajanaSans-Regular2";
   min-width: 80px;
-  width: 30vw;
+  width: 25vw;
   max-width: 100px;
 
   height: 40px;
