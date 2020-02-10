@@ -39,7 +39,7 @@ const ProgressBar = props => {
       <div className="barOuter">
         <div id={props.slug} 
           style={{
-            
+            width:"0%",
             backgroundColor: "white",
             borderColor: "black",
             borderWidth: "2px",
