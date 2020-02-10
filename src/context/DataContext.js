@@ -53,8 +53,15 @@ const DataContextProvider = props => {
       body: raw,
       redirect: "follow"
     };
+
+    var requestOptions2 = {
+      method: "GET",
+     
+    };
+
+    //https://api.eosdetroit.io:443/v1/chain/get_account
    
-    fetch("https://api.eosdetroit.io:443/v1/chain/get_account", requestOptions)
+    fetch(`http://localhost:8080/api/fetch/${accountName}`, requestOptions2)
       .then(response => response.json())
       .then(result => {
         console.log(result);

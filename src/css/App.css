@@ -68,6 +68,14 @@ body {
   min-width: 100%;
 }
 
+.headtitle,.ammount,.tradebuttons,.progressbar,.percent,.navicon,.tobeadded   {
+  justify-content: center;
+  align-items: center;
+}
+
+.wallet, .ammount, .tradebuttons,.resourceinfo,.navicon, .ressources, .outerContainer { 
+  flex-direction: column;
+}
 
 
 .outerContainer {
@@ -76,14 +84,26 @@ body {
   height: 100vh;
   max-width: 100%;
 
-  display: flex;
+
   align-items: center;
 
-  flex-direction: column;
+  
 }
 
-
-
+.tradebuttons,
+.tobeadded ,
+.navicon, 
+.navbar,
+.percent ,
+.progressbar,
+.ressource_type,
+.ressources,
+#ressources_title,
+.resourceinfo
+.stakedinfo,
+.wallet,
+.headtitle,
+.outerContainer,
 .header,
 .ammount,
 .info,
@@ -91,9 +111,9 @@ body {
 #eos,
 #dollar {
   display: flex;
-
-
 }
+
+
 
 .header {
   flex: 0.25;
@@ -102,18 +122,12 @@ body {
 }
 
 
-.headtitle {
-  display: flex;
 
-  justify-content: center;
-  align-items: center;
-}
 
 .headtitle h1 {
   font-size: 3vh;
   letter-spacing: 2px;
   font-family: "trajanaSans-Regular2";
-
 }
 
 
@@ -122,15 +136,12 @@ body {
 .info {
   margin-bottom: 60px;
   flex: 2.0;
-
   width: 100%;
   min-height: 320px;
 }
 
 .wallet {
-  display: flex;
-
-  flex-direction: column;
+ 
   flex: 1
 }
 
@@ -139,9 +150,8 @@ body {
 
 .ammount {
   width: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  
+
   flex: 1;
  
   min-height: 75px;
@@ -150,9 +160,8 @@ body {
 .tradebuttons{
  
   width: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+ 
+
   flex: 1;
   min-height: 75px;
 
@@ -189,18 +198,30 @@ body {
   padding-top: 5x
 }
 
+.coinIcon{
+  height: 20px;
+  width: auto;
+}
+.stakedinfo{
+
+
+  flex-direction: row;
+  
+}
+
+.stakedinfo p{line-height: 1.5;}
 
 .resourceinfo {
   
   flex: 2.0;
-  display: flex;
-  flex-direction: column;
+  
+
   width: 100%;
   min-height: 320px;
 }
 
 #ressources_title {
-  display: flex;
+  
   flex-direction: row;
   justify-content: space-between;
   line-height: 1.4;
@@ -226,8 +247,8 @@ body {
 
 .ressources {
   width: 100%;
-  flex-direction: column;
-  display: flex;
+ 
+ 
   justify-content: space-around;
   align-items: center;
 
@@ -241,7 +262,7 @@ body {
 
 .ressource_type {
 
-  display: flex;
+
   flex-direction: row;
 
   align-items: center;
@@ -275,10 +296,9 @@ body {
 
 
 .progressbar {
-  display: flex;
+
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+ 
   min-width: 90%;
   height: 20px;
 }
@@ -286,9 +306,7 @@ body {
 
 .percent {
   flex: 0.1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 
   font-size: 12px;
 }
@@ -315,7 +333,7 @@ body {
 
 .navbar {
   border-top: 1px solid black;
-  display: flex;
+
   flex: 1;
   flex-direction: row;
   align-items: center;
@@ -330,11 +348,10 @@ body {
 
 
 .navicon {
-  display: flex;
+
   flex: 1;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+ 
+ 
 }
 
 .navicon img {
@@ -348,11 +365,9 @@ body {
 }
 
 .tobeadded {
-  justify-self: center;
-  align-self: center;
-  display: flex;
+ 
   width: 100%;
-  justify-content: center;
+
 
 }
 
@@ -364,7 +379,7 @@ body {
 }
 
 .tradebuttons{
-  display: flex;
+ 
   flex-direction: row;
   justify-content: space-around;
   align-items: center;

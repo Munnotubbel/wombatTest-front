@@ -12,13 +12,13 @@ const Ressources = () => {
       
         <div className="ressources" >
             
-            <div><RessourceType type={"Net"} consumption={`${dataCon.net_use}kb / ${dataCon.net_max}kb`} staked={dataCon.net_weight} />
+            <div><RessourceType type={"Net"} consumption={`${dataCon.net_use}kb / ${dataCon.net_max}kb`} staked={dataCon.net_weight} withIcon={true} />
             <ProgressBar  percent={Math.round((dataCon.net_use/dataCon.net_max)*100)} />
             
             </div>
 
 
-            <div><RessourceType type={"Cpu"} consumption={`${dataCon.cpu_use}kb / ${dataCon.cpu_max}kb`} staked={dataCon.cpu_weight} />
+            <div><RessourceType type={"Cpu"} consumption={`${dataCon.cpu_use}kb / ${dataCon.cpu_max}kb`} staked={dataCon.cpu_weight} withIcon={true}/>
             <ProgressBar  percent={Math.round((dataCon.cpu_use/dataCon.cpu_max)*100)>100 ? 100 : Math.round((dataCon.cpu_use/dataCon.cpu_max)*100) } /></div>
 
 
