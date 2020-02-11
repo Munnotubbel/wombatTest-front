@@ -2,19 +2,21 @@ import React,{useEffect, useContext} from "react";
 import { DataContext } from "../context/DataContext";
 
 const ProgressBar = props => {
+  
    const dataCon = useContext(DataContext);
+    const loading = dataCon.isLoading;
    useEffect(() => {
     move()
-  }, [dataCon.isLoading===true]);
+  }, [loading===true]);
 
 
    var i = 0;
    function move() {
     var elem = document.getElementById(props.slug);
      if (props.percent>0){
-     if (i == 0) {
+     if (i === 0) {
        i = 1;
-       var elem = document.getElementById(props.slug);
+      
        var width = 0;
        var id = setInterval(frame, 20);
        function frame() {

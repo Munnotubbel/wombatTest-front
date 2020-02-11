@@ -36,7 +36,7 @@ const sourceLink ="*"
       requestOptions
     )
       .then(response => response.json())
-      .then(res => {console.log(res); setExchangeValue(res[0].price)})
+      .then(res => setExchangeValue(res[0].price))
       
       .catch(error => console.log("error", error));
   }
@@ -74,7 +74,7 @@ const sourceLink ="*"
     fetch(`https://eos-station.herokuapp.com/api/fetch/${accountName}`, requestOptions2)
       .then(response => response.json())
       .then(result => {
-       console.log(result)
+
         if(result){
         
 
