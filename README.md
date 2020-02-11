@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<h4>!! ----------------for your notice----------------- !! <br>
+<h4>
   if you also work with https://github.com/Munnotubbel/wombatTest-back.git change the fetch URL in the React
   <br>
   in src/context/DataContext.js
