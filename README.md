@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<h4>!! if you also work with https://github.com/Munnotubbel/wombatTest-back.git change the fetch URL in the React src/context/DataContext.js to localhost:8080
+<h4>!! if you also work with https://github.com/Munnotubbel/wombatTest-back.git change the fetch URL in the React src/context/DataContext.js - line 35 & line 74 - to localhost:8080
 <br><br>
 otherwise you can just run the React-App and is will fetch the Informations from the online Server<br> https://eos-station.herokuapp.com/
 </h4>
