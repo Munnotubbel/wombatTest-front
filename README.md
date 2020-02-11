@@ -1,13 +1,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 <h4>
-  if you also work with https://github.com/Munnotubbel/wombatTest-back.git change the fetch URL in the React
-  <br>
+  if you also work with https://github.com/Munnotubbel/wombatTest-back.git <br>
+  change the fetch URL in the React
+  <br><br>
   in src/context/DataContext.js
-  <br>
+  <br><br>
   <i> - line 35 & line 74 -</i> to localhost:8080
-<br><br>
+<br><br><br>
 otherwise you can just run the React-App and is will fetch the Informations from the online Server<br> https://eos-station.herokuapp.com/
+  
+  <br><br><br>
+  if you want to use the App for Another Eos Accountname change the Name<br><br>
+  in in src/context/DataContext.js<br><br>
+   <i> - line 1 -</i> to localhost:8080
 </h4>
 
 ## Available Scripts
