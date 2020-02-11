@@ -32,7 +32,7 @@ const sourceLink ="*"
     };
 
     fetch(
-      "https://api.nomics.com/v1/currencies/ticker?key=7c8016160f57bb4a5ab8707a73810e33&ids=EOS",
+      "https://eos-station.herokuapp.com/api/fetch/price",
       requestOptions
     )
       .then(response => response.json())
