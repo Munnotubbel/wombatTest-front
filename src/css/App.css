@@ -59,7 +59,8 @@ body {
 .progressbar,
 .percent,
 .navicon,
-.tobeadded {
+.tobeadded,
+.innerContainer {
   justify-content: center;
   align-items: center;
 }
@@ -74,12 +75,116 @@ body {
   flex-direction: column;
 }
 
+@media (max-width: 499px) {
+  .innerContainer {
+    min-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+  }
+
+  .footer {
+    width: 100%;
+  }
+
+  .navbar{border-left: 0px;
+  border-right: 0px;}
+}
+
+@media (min-width: 500px) {
+  .innerContainer {
+    min-width: 80%;
+    max-width: 80%;
+    min-height: 100vh;
+    max-height: 100%;
+  }
+
+  .footer {
+    width: 80%;
+  }
+
+  .navbar{border-left: 1px solid black;
+    border-right: 1px solid black;}
+}
+
+@media (min-width: 700px) {
+  .innerContainer {
+    min-width: 70%;
+    max-width: 70%;
+    min-height: 100vh;
+    max-height: 100%;
+  }
+
+  .footer {
+    width: 70%;
+  }
+
+  .navbar{border-left: 1px solid black;
+    border-right: 1px solid black;}
+}
+
+@media (min-width: 900px) {
+  .innerContainer {
+    min-width: 50%;
+    max-width: 50%;
+    min-height: 100vh;
+    max-height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer {
+    width: 70%;
+  }
+
+  .navbar{border-left: 1px solid black;
+    border-right: 1px solid black;}
+}
+
+@media (min-width: 1100px) {
+  .innerContainer {
+    min-width: 40%;
+    max-width: 40%;
+    min-height: 100vh;
+    max-height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer {
+    width: 70%;
+  }
+
+  .navbar{border-left: 1px solid black;
+    border-right: 1px solid black;}
+}
+
+@media (min-width: 1400px) {
+  .innerContainer {
+    min-width: 30%;
+    max-width: 30%;
+    min-height: 100vh;
+    max-height: 100%;
+  }
+
+  .footer {
+    width: 30%;
+  }
+
+  .navbar{border-left: 1px solid black;
+    border-right: 1px solid black;}
+}
+
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  flex: 1;
+}
 .outerContainer {
   min-width: 100%;
   max-width: 100vw;
   min-height: 100vh;
   max-height: 100%;
-
+  justify-content: center;
   align-items: center;
 }
 
@@ -358,7 +463,6 @@ body {
   bottom: 0;
   z-index: 100;
   flex: 0.25;
-  width: 100%;
   min-height: 50px;
 }
 

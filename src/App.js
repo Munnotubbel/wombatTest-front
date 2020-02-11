@@ -15,6 +15,7 @@ function App() {
     <Router>
       <DataContextProvider>
         <div className="outerContainer">
+          <div className="innerContainer">
           <div className="header">
             <Header />
           </div>
@@ -37,9 +38,9 @@ function App() {
           </div>
 
           <div className="footer">
-            <NavBar />
+          <NavBar />
           </div>
-        </div>
+        </div></div>
       </DataContextProvider>
     </Router>
   );
